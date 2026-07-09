@@ -1,29 +1,29 @@
 {
   "expo": {
-    "name": "lostandfound",
-    "slug": "lostandfound",
+    "name": "Campus Connect",
+    "slug": "campus-connect",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/Campus.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash-icon.png",
+      "image": "./assets/Campus.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+  "backgroundColor": "#DDF6F4"
     },
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/Campus.png",
+    "backgroundColor": "#DDF6F4"
       },
       "edgeToEdgeEnabled": true
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/Campus.png"
     }
   }
 }
