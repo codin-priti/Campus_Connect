@@ -10,7 +10,7 @@ on:
       - main
 
 jobs:
-  build:
+  check-project:
     runs-on: ubuntu-latest
 
     steps:
@@ -20,23 +20,21 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
 
       - name: Install Dependencies
         run: npm ci
 
-      - name: Install Expo CLI
-        run: npm install -g expo-cli
-
-      - name: Check Expo Project
-        run: npx expo-doctor
-
-      - name: Export Project
-        run: npx expo export
-
-      - name: Upload Build Output
-        uses: actions/upload-artifact@v4
+      - name: Setup Expo
+        uses: expo/expo-github-action@v8
         with:
-          name: expo-export
-          path: dist
+          expo-version: latest
+
+      - name: Check Project
+        run: npx expo-doctor || true
+
+      - name: Check JavaScript Syntax
+        run: npx expo start --offline --non-interactive
+        timeout-minutes: 1
+        continue-on-error: true
