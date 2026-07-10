@@ -162,6 +162,6 @@ npx expo start
 
 **Priti Paul**
 
-- LinkedIn: [https://www.linkedin.com/in/your-profile](https://www.linkedin.com/in/priti-paul-28424a239/)
+- LinkedIn: https://www.linkedin.com/in/priti-paul-28424a239/
 - GitHub: https://github.com/codin-priti
 
